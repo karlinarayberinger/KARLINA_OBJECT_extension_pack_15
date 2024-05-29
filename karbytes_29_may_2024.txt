@@ -8,7 +8,7 @@
 
 The image at the following Uniform Resource Locator depicts a hand-drawn flowchart whose sole components are three nodes which are arranged as a unidirectional linear sequence such that the first node is a parallelogram inscribed with the word "INPUT", the second node is a rectangle inscribed with the word "PROCESSING", and the third node is a parallelogram inscribed with the word "OUTPUT" (and there is an arrow drawn between the first and second nodes which points exclusively from the first node to the second node and there is an arrow drawn between the second and third nodes which points exclusively from thr second node to the third node):
 
-[insert_url_here]
+https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_15/main/input_processing_output_flowchart_29may2024.jpg
 
 The aforementioned image of the simple three-step flowchart is karbytes' attempt to visually recreate the same flowchart which karbytes remembers seeing drawn on the whiteboard of the community college classroom of karbytes' first computer science class in the year 2009 on the first day of that class's encompassing semester. 
 
