@@ -6,7 +6,7 @@
  * license: PUBLIC_DOMAIN
  */
 
-The image at the following Uniform Resource Locator depicts a hand-drawn flowchart whose sole components are three nodes which are arranged as a unidirectional linear sequence such that the first node is a parallelogram inscribed with the word “INPUT”, the second node is a rectangle inscribed with the word “PROCESSING”, and the third node is a parallelogram inscribed with the word “OUTPUT” (and there is an arrow drawn between the first and second nodes which points exclusively from the first node to the second node and there is an arrow drawn between the second and third nodes which points exclusively from thr second node to the third node):
+The image at the following Uniform Resource Locator depicts a hand-drawn flowchart whose sole components are three nodes which are arranged as a unidirectional linear sequence such that the first node is a parallelogram inscribed with the word “INPUT”, the second node is a rectangle inscribed with the word “PROCESSING”, and the third node is a parallelogram inscribed with the word “OUTPUT” (and there is an arrow drawn between the first and second nodes which points exclusively from the first node to the second node and there is an arrow drawn between the second and third nodes which points exclusively from the second node to the third node):
 
 https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_15/main/input_processing_output_flowchart_29may2024.jpg
 
