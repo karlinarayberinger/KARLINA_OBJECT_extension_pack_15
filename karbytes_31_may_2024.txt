@@ -8,7 +8,7 @@
 
 The following text was copy-pasted from a conversation which karbytes had with ChatGPT-4o (which is newer version of ChatGPT than is ChatGPT-4) on 30_MAY_2024 at approximately 11:00AM Pacific Standard Time.
 
-(Note that the chat user handle which did not appear on the ChatGPT web page chat interface appears as “karbytes” in this plain-text note. Note also that karbytes had to manually insert the numbers prefacing some of ChatGPT's text output because those numbers were not copied over. Also, karbytes manually inserted dash symbols ("-") where ChatGPT printed bullet points (and those bullet point characters were also not copied over into this plain-text note)).
+(Note that the chat user handle which did not appear on the ChatGPT web page chat interface appears as “karbytes” in this plain-text note. Note also that karbytes had to manually insert the numbers prefacing some of ChatGPT's text output because those numbers were not copied over. Also, karbytes manually inserted dash symbols ("-") where ChatGPT printed bullet points (and those bullet point characters were also not copied over into this plain-text note). Finally, in the HyperText Markup Language (HTML) version of this note, each instance of hypertext in ChatGPT's answers points to the same external web page reference which ChatGPT made at that point in the conversation in the original ChatGPT chat window interface).
 
 * * *
 
