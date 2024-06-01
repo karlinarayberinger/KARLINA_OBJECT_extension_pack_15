@@ -1,5 +1,3 @@
-
-
 /**
  * file: karbytes_01_june_2024.txt
  * type: plain-text
@@ -14,4 +12,6 @@ karbytes_1: “I thought anarchy would be the path of least resistance; the only
 
 karbytes_0: “In practice (and according to other humans), do you present yourself as an anarchist who believes that ‘might makes right’ is the predominant ethic?”
 
-karbytes_1: “Not usually. Instead, I pretend to be a socialist democrat (and I did vote Green Party) who believes that most people are harmless and doing the absolute best they can given their circumstances (so as to prevent making anyone feel threatened or unsupported).” 
+karbytes_1: “Not usually. Instead, I pretend to be a socialist democrat (and I did vote Green Party) who believes that most people are harmless and doing the absolute best they can given their circumstances (so as to prevent making anyone feel threatened or unsupported).”
+
+karbytes_1: “Actually, I might actually have better presented myself to the public as a green libertarian than as a socialist democrat. I think capitalism is necessary for enabling people to have genuine freedom to choose buyable options as a consumer (without the constraints of having to appeal towards some kind of social or ideological affiliation). Capitalism (in theory) allows any goods and services to be sold but only those which are most in demand and in most supply seem to generate the most revenue (and hence infrastructural accommodation to support logistics which individual consumers favor and are not forced to have no alternatives to are paid to exist).” 
