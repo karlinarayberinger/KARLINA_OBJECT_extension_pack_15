@@ -235,3 +235,13 @@ video_title: "Sean Carroll, Daniel Dennett, & Steven Pinker: AI, Parapsychology,
 video_date: 24_MARCH_2024
 
 video_link: https://www.youtube.com/watch?v=gh2dgsaNY3A
+
+* * *
+
+On 02_JUNE_2024 at approximately 5:00AM Pacific Standard Time, karbytes shared the following video as a social media post on karbytes' Twitter dot Com page and on karbytes' Minds dot Com page:
+
+video_title: "Mindscape 275 | Solo: Quantum Fields, Particles, Forces, and Symmetries"
+
+video_date: 13_MAY_2024
+
+video_link: https://www.youtube.com/watch?v=PTknjbaDy88
