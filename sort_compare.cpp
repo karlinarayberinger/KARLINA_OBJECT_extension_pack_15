@@ -8,7 +8,7 @@
 
 /** preprocessing directives */
 #include <iostream> // standard input (std::cin), standard output (std::cout)
-#include <fstream> // file input, file output
+#include <fstream> // file input, file output, file open, file close
 #include <stdio.h> // NULL macro
 #include <stdlib.h> // srand(), rand()
 #include <time.h> // time() 
@@ -53,7 +53,12 @@ int main()
     file << "\nStart Of Program";
     file << "\n--------------------------------";
 
-    //...
+    // Prompt the user to enter an input value for S.
+    std::cout << "\n\nEnter a natural number value to store in the value S which is no larger than " << MAXIMUM_S << ": ";
+    file << "\n\nEnter a natural number value to store in the value S which is no larger than " << MAXIMUM_S << ": ";
+
+    // Scan the command line terminal for the most recent keyboard input value. Store that value in S.
+    std::cin >> S;
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
