@@ -95,6 +95,12 @@ int main()
     // If S is smaller than 1 or if S is larger than MAXIMUM_S, set S to 10.
     T = ((T < 1) || (T > MAXIMUM_T)) ? 10 : T; 
 
+    // Print "T := {T}. // number of unique states each element of A can represent exactly one of." to the command line terminal.
+    std::cout << "\n\nT := " << T << ". // number of unique states each element of A can represent exactly one of.";
+
+    // Print "T := {T}. // number of unique states each element of A can represent exactly one of." to the file output stream.
+    file << "\n\nT := " << T << ". // number of unique states each element of A can represent exactly one of.";
+
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
     std::cout << "\nEnd Of Program";
