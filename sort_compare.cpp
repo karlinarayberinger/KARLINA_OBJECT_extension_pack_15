@@ -14,8 +14,6 @@
 #include <time.h> // time() 
 #define MAXIMUM_S 1000 // constant which represents the maximum value for S
 #define MAXIMUM_T 1000 // constant which represents the maximum value for T
-#define MINIMUM_S 1 // constant which represents the minimum value for S
-#define MINIMUM_T 1 // constant which represents the minimum value for T
 
 /** function prototypes */
 void generate_array(int * A, int S, int T);
@@ -74,6 +72,28 @@ int main()
 
     // Print "S := {S}. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A." to the file output stream.
     file << "\n\nS := " << S << ". // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.";
+
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    // Prompt the user to enter an input value for T.
+    std::cout << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_S << ": ";
+    file << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_S << ": ";
+
+    // Scan the command line terminal for the most recent keyboard input value. Store that value in S.
+    std::cin >> S;
+
+    // Print "The value which was entered for S is {S}." to the command line terminal.
+    std::cout << "\nThe value which was entered for S is " << S << ".";
+
+    // Print "The value which was entered for S is {S}." to the file output stream.
+    file << "\n\nThe value which was entered for S is " << S << ".";
+
+    // If S is smaller than 1 or if S is larger than MAXIMUM_S, set S to 10.
+    S = ((S < 1) || (S > MAXIMUM_S)) ? 10 : S; 
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
