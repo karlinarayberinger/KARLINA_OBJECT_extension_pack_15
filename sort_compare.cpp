@@ -108,13 +108,36 @@ int main()
     file << "\n\n--------------------------------";
 
     /**
-     * Allocate S contiguous int-sized chunks of memory and store the memory address of the first int-sized chunk 
+     * Allocate S contiguous int-sized chunks of memory 
+     * and store the memory address of the first int-sized chunk 
      * of memory, A[0]. inside the pointer-to-int type variable named A.
+     * 
+     * A is a dynamically-allocated array (which means that the array size 
+     * was determined during progam runtime instead of during program 
+     * compile time).
      */
     A = new int [S];
 
     // Populate A with random integer values.
     populate_array(A,S,T);
+
+    // Print the contents of A to the command line terminal.
+    std::cout << "\n\nA = " << A << ". // memory address of A[0]\n";
+
+    // Print the contents of A to the file output stream.
+    file << "\n\nA = " << A << ". // memory address of A[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A, 
+     * print the contents of the ith element of the array, A[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA[" << i << "] = " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+        file << "\nA[" << i << "] = " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+    }
 
     // Print a horizontal line to the command line terminal.
     std::cout << "\n\n--------------------------------";
