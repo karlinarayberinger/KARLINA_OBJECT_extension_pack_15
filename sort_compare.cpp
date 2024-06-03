@@ -12,12 +12,17 @@
 #include <stdio.h> // NULL macro
 #include <stdlib.h> // srand(), rand()
 #include <time.h> // time() 
+#include <chrono>
+#include <cstdlib>
 #define MAXIMUM_S 1000 // constant which represents the maximum value for S
 #define MAXIMUM_T 1000 // constant which represents the maximum value for T
 
 /** function prototypes */
 void populate_array(int * A, int S, int T);
 void bubble_sort(int * A, int S);
+void merge_sort(int * A, int S);
+void merge_sort(int * A, int left, int right);
+void merge(int * A, int left, int mid, int right);
 
 /** program entry point */
 int main()
@@ -145,6 +150,18 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
+    // Get the start time.
+    auto start = std::chrono::high_resolution_clock::now();
+
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    // Get the end time
+    auto end = std::chrono::high_resolution_clock::now();
+
     // De-allocate memory which was assigned to the dynamically-allocated array of S int type values
     delete [] A;
 
@@ -231,4 +248,62 @@ void bubble_sort(int * A, int S)
         }
         if (!adjacent_elements_were_swapped) array_is_sorted = true;
     }
+}
+
+void merge(int * A, int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int *L = new int[n1];
+    int *R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = A[left + i];
+    for (int j = 0; j < n2; j++)
+        R[j] = A[mid + 1 + j];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            A[k] = L[i];
+            i++;
+        } else {
+            A[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        A[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        A[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void merge_sort(int * A, int left, int right) 
+{
+    if (left < right) 
+    {
+        int mid = left + (right - left) / 2;
+
+        merge_sort(A, left, mid);
+        merge_sort(A, mid + 1, right);
+
+        merge(A, left, mid, right);
+    }
+}
+
+void merge_sort(int * A, int S) 
+{
+    merge_sort(A, 0, S - 1);
 }
