@@ -80,20 +80,20 @@ int main()
     file << "\n\n--------------------------------";
 
     // Prompt the user to enter an input value for T.
-    std::cout << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_S << ": ";
-    file << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_S << ": ";
+    std::cout << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_T << ": ";
+    file << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_T << ": ";
 
-    // Scan the command line terminal for the most recent keyboard input value. Store that value in S.
-    std::cin >> S;
+    // Scan the command line terminal for the most recent keyboard input value. Store that value in T.
+    std::cin >> T;
 
-    // Print "The value which was entered for S is {S}." to the command line terminal.
-    std::cout << "\nThe value which was entered for S is " << S << ".";
+    // Print "The value which was entered for T is {T}." to the command line terminal.
+    std::cout << "\nThe value which was entered for T is " << S << ".";
 
-    // Print "The value which was entered for S is {S}." to the file output stream.
-    file << "\n\nThe value which was entered for S is " << S << ".";
+    // Print "The value which was entered for T is {T}." to the file output stream.
+    file << "\n\nThe value which was entered for T is " << T << ".";
 
     // If S is smaller than 1 or if S is larger than MAXIMUM_S, set S to 10.
-    S = ((S < 1) || (S > MAXIMUM_S)) ? 10 : S; 
+    T = ((T < 1) || (T > MAXIMUM_T)) ? 10 : T; 
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
