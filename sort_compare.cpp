@@ -19,13 +19,13 @@
 
 /** function prototypes */
 void generate_array(int * A, int S, int T);
-void bubble_sort(int * A, int S, int & C);
+void bubble_sort(int * A, int S);
 
 /** program entry point */
 int main()
 {
-    // Declare four int type variables and set each of their initial values to 0.
-    int S = 0, T = 0, i = 0, C = 0;
+    // Declare three int type variables and set each of their initial values to 0.
+    int S = 0, T = 0, i = 0;
 
     // Declare one pointer-to-int type variable.
     int * A;
@@ -96,7 +96,8 @@ void generate_array(int * A, int S, int T)
 {
     /**
      * Seed the pseudo-random number generator with the number of seconds 
-     * elapsed since the Unix Epoch (which is 01_JANUARY_1970).
+     * elapsed since some epoch such as the Unix Epoch (which is 
+     * 01_JANUARY_1970).
      */
     std::srand(std::time(0));
 
