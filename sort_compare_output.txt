@@ -4,17 +4,32 @@ Start Of Program
 
 Enter a natural number value to store in the value S which is no larger than 1000: 
 
-The value which was entered for S is 6.
+The value which was entered for S is 8.
 
-S := 6. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
+S := 8. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
 
 --------------------------------
 
 Enter a natural number value to store in the value T which is no larger than 1000: 
 
-The value which was entered for T is 20.
+The value which was entered for T is 30.
 
-T := 20. // number of unique states each element of A can represent exactly one of.
+T := 30. // number of unique states each element of A can represent exactly one of.
+
+--------------------------------
+
+A := 0x559d736968c0. // memory address of A[0]
+
+A[0] := 14.		// &A[0] = 0x559d736968c0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[0]).
+A[1] := 23.		// &A[1] = 0x559d736968c4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[1]).
+A[2] := 17.		// &A[2] = 0x559d736968c8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[2]).
+A[3] := 7.		// &A[3] = 0x559d736968cc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[3]).
+A[4] := 13.		// &A[4] = 0x559d736968d0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[4]).
+A[5] := 3.		// &A[5] = 0x559d736968d4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[5]).
+A[6] := 15.		// &A[6] = 0x559d736968d8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[6]).
+A[7] := 6.		// &A[7] = 0x559d736968dc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[7]).
+
+--------------------------------
 
 --------------------------------
 End Of Program

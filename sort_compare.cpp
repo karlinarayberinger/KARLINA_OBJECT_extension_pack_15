@@ -122,10 +122,10 @@ int main()
     populate_array(A,S,T);
 
     // Print the contents of A to the command line terminal.
-    std::cout << "\n\nA = " << A << ". // memory address of A[0]\n";
+    std::cout << "\n\nA := " << A << ". // memory address of A[0]\n";
 
     // Print the contents of A to the file output stream.
-    file << "\n\nA = " << A << ". // memory address of A[0]\n";
+    file << "\n\nA := " << A << ". // memory address of A[0]\n";
 
     /**
      * For each element, i, of the array represented by A, 
@@ -135,8 +135,8 @@ int main()
      */
     for (i = 0; i < S; i += 1) 
     {
-        std::cout << "\nA[" << i << "] = " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
-        file << "\nA[" << i << "] = " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+        std::cout << "\nA[" << i << "] := " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+        file << "\nA[" << i << "] := " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
     }
 
     // Print a horizontal line to the command line terminal.
