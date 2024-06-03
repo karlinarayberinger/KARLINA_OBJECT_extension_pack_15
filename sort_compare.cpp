@@ -101,8 +101,29 @@ int main()
     // Print "T := {T}. // number of unique states each element of A can represent exactly one of." to the file output stream.
     file << "\n\nT := " << T << ". // number of unique states each element of A can represent exactly one of.";
 
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    /**
+     * Allocate S contiguous int-sized chunks of memory and store the memory address of the first int-sized chunk 
+     * of memory, A[0]. inside the pointer-to-int type variable named A.
+     */
+    A = new int [S];
+
     // Populate A with random integer values.
     populate_array(A,S,T);
+
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values
+    delete [] A;
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
