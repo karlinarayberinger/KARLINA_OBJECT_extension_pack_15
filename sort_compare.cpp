@@ -60,6 +60,15 @@ int main()
     // Scan the command line terminal for the most recent keyboard input value. Store that value in S.
     std::cin >> S;
 
+    // Print "The value which was entered for S is {S}." to the command line terminal.
+    std::cout << "\nThe value which was entered for S is " << S << ".";
+
+    // Print "The value which was entered for S is {S}." to the file output stream.
+    file << "\n\nThe value which was entered for S is " << S << ".";
+
+    // If S is smaller than 1 or if S is larger than MAXIMUM_S, set S to 10.
+    S = ((S < 1) || (S > MAXIMUM_S)) ? 10 : S; 
+
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
     std::cout << "\nEnd Of Program";
