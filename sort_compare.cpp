@@ -147,8 +147,8 @@ int main()
      */
     for (i = 0; i < S; i += 1) 
     {
-        std::cout << "\nA[" << i << "] := " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
-        file << "\nA[" << i << "] := " << A[i] << ".\t\t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+        std::cout << "\nA[" << i << "] := " << A[i] << ". \t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+        file << "\nA[" << i << "] := " << A[i] << ". \t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
     }
 
     // Print a horizontal line to the command line terminal.
@@ -180,8 +180,8 @@ int main()
      */
     for (i = 0; i < S; i += 1) 
     {
-        std::cout << "\nA_copy[" << i << "] := " << A_copy[i] << ".\t\t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
-        file << "\nA_copy[" << i << "] := " << A_copy[i] << ".\t\t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
+        std::cout << "\nA_copy[" << i << "] := " << A_copy[i] << ". \t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
+        file << "\nA_copy[" << i << "] := " << A_copy[i] << ". \t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
     }
 
     // Get the start time.
