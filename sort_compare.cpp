@@ -119,7 +119,7 @@ void generate_array(int * A, int S, int T)
      * elapsed since some epoch such as the Unix Epoch (which is 
      * 01_JANUARY_1970).
      */
-    std::srand(std::time(0));
+    srand(time(NULL));
 
     // Populate the array with random integer values in the range [0, T-1].
     for (int i = 0; i < S; i++) A[i] = std::rand() % T;
