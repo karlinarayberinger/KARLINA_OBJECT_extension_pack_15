@@ -1,0 +1,21 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+Enter a natural number value to store in the value S which is no larger than 1000: 
+
+The value which was entered for S is 6.
+
+S := 6. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
+
+--------------------------------
+
+Enter a natural number value to store in the value T which is no larger than 1000: 
+
+The value which was entered for T is 20.
+
+T := 20. // number of unique states each element of A can represent exactly one of.
+
+--------------------------------
+End Of Program
+--------------------------------
