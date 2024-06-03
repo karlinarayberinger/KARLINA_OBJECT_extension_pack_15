@@ -4,31 +4,31 @@ Start Of Program
 
 Enter a natural number value to store in the value S which is no larger than 1000: 
 
-The value which was entered for S is 9.
+The value which was entered for S is 7.
 
-S := 9. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
+S := 7. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
 
 --------------------------------
 
 Enter a natural number value to store in the value T which is no larger than 1000: 
 
-The value which was entered for T is 9.
+The value which was entered for T is 45.
 
-T := 9. // number of unique states each element of A can represent exactly one of.
+T := 45. // number of unique states each element of A can represent exactly one of.
 
 --------------------------------
 
-A := 0x55630c7198c0. // memory address of A[0]
+UNSORTED ARRAY
 
-A[0] := 0.		// &A[0] = 0x55630c7198c0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[0]).
-A[1] := 4.		// &A[1] = 0x55630c7198c4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[1]).
-A[2] := 7.		// &A[2] = 0x55630c7198c8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[2]).
-A[3] := 0.		// &A[3] = 0x55630c7198cc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[3]).
-A[4] := 5.		// &A[4] = 0x55630c7198d0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[4]).
-A[5] := 7.		// &A[5] = 0x55630c7198d4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[5]).
-A[6] := 5.		// &A[6] = 0x55630c7198d8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[6]).
-A[7] := 8.		// &A[7] = 0x55630c7198dc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[7]).
-A[8] := 2.		// &A[8] = 0x55630c7198e0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[8]).
+A := 0x5634ae4d68c0. // memory address of A[0]
+
+A[0] := 12.		// &A[0] = 0x5634ae4d68c0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[0]).
+A[1] := 41.		// &A[1] = 0x5634ae4d68c4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[1]).
+A[2] := 2.		// &A[2] = 0x5634ae4d68c8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[2]).
+A[3] := 37.		// &A[3] = 0x5634ae4d68cc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[3]).
+A[4] := 25.		// &A[4] = 0x5634ae4d68d0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[4]).
+A[5] := 40.		// &A[5] = 0x5634ae4d68d4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[5]).
+A[6] := 9.		// &A[6] = 0x5634ae4d68d8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[6]).
 
 --------------------------------
 

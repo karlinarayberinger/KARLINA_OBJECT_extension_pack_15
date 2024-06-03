@@ -12,8 +12,7 @@
 #include <stdio.h> // NULL macro
 #include <stdlib.h> // srand(), rand()
 #include <time.h> // time() 
-#include <chrono>
-#include <cstdlib>
+#include <chrono> // for calculating sorting algorithm runtimes
 #define MAXIMUM_S 1000 // constant which represents the maximum value for S
 #define MAXIMUM_T 1000 // constant which represents the maximum value for T
 
@@ -111,6 +110,12 @@ int main()
 
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
+
+    // Print "UNSORTED ARRAY" to the command line terminal.
+    std::cout << "\n\nUNSORTED ARRAY";
+
+    // Print "UNSORTED ARRAY" to the file outpur stream.
+    file << "\n\nUNSORTED ARRAY";
 
     /**
      * Allocate S contiguous int-sized chunks of memory 
