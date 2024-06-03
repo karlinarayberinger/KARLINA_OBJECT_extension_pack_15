@@ -163,7 +163,7 @@ int main()
     // Print "UNSORTED ARRAY A_copy" to the command line terminal.
     std::cout << "\n\nUNSORTED ARRAY A_copy";
 
-    // Print "UNSORTED ARRAY A_copy" to the file outpur stream.
+    // Print "UNSORTED ARRAY A_copy" to the file output stream.
     file << "\n\nUNSORTED ARRAY A_copy";
 
     // Print the contents of A_copy to the command line terminal.
@@ -184,17 +184,50 @@ int main()
         file << "\nA_copy[" << i << "] := " << A_copy[i] << ". \t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
     }
 
-    // Get the start time.
-    auto start = std::chrono::high_resolution_clock::now();
-
     // Print a horizontal line to the command line terminal.
     std::cout << "\n\n--------------------------------";
 
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
-    // Get the end time
+    // Print "SORTED ARRAY A (USING BUBBLE_SORT)" to the command line terminal.
+    std::cout << "\n\nSORTED ARRAY A (USING BUBBLE_SORT)";
+
+    // Print "SORTED ARRAY A (USING BUBBLE_SORT)" to the file output stream.
+    file << "\n\nSORTED ARRAY A (USING BUBBLE_SORT)";
+
+    // Get the start time.
+    auto start = std::chrono::high_resolution_clock::now();
+
+    // Sort the integer values stored in array A to be in ascending order using the Bubble Sort algorithm.
+    bubble_sort(A, S);
+
+    // Get the end time.
     auto end = std::chrono::high_resolution_clock::now();
+
+    // Calculate the duration of time betweem start and end time.
+    std::chrono::duration<double> duration = end - start;
+
+    // Print the contents of A to the command line terminal.
+    std::cout << "\n\nA := " << A << ". // memory address of A[0]\n";
+
+    // Print the contents of A to the file output stream.
+    file << "\n\nA := " << A << ". // memory address of A[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A, 
+     * print the contents of the ith element of the array, A[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA[" << i << "] := " << A[i] << ". \t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+        file << "\nA[" << i << "] := " << A[i] << ". \t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
+    }
+
+    // Print the duration in seconds
+    std::cout << "\n\nElapsed time for bubble_sort(A, S): " << duration.count() << " seconds.";
 
     // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A.
     delete [] A;
