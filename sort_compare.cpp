@@ -69,6 +69,12 @@ int main()
     // If S is smaller than 1 or if S is larger than MAXIMUM_S, set S to 10.
     S = ((S < 1) || (S > MAXIMUM_S)) ? 10 : S; 
 
+    // Print "S := {S}. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A." to the command line terminal.
+    std::cout << "\n\nS := " << S << ". // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.";
+
+    // Print "S := {S}. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A." to the file output stream.
+    file << "\n\nS := " << S << ". // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.";
+
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
     std::cout << "\nEnd Of Program";
