@@ -16,7 +16,7 @@
 #define MAXIMUM_T 1000 // constant which represents the maximum value for T
 
 /** function prototypes */
-void generate_array(int * A, int S, int T);
+void populate_array(int * A, int S, int T);
 void bubble_sort(int * A, int S);
 
 /** program entry point */
@@ -101,6 +101,9 @@ int main()
     // Print "T := {T}. // number of unique states each element of A can represent exactly one of." to the file output stream.
     file << "\n\nT := " << T << ". // number of unique states each element of A can represent exactly one of.";
 
+    // Populate A with random integer values.
+    populate_array(A,S,T);
+
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
     std::cout << "\nEnd Of Program";
@@ -138,7 +141,7 @@ int main()
  * referred to as A if tbe elements of A are not already sorted in 
  * ascending order).
  */
-void generate_array(int * A, int S, int T)
+void populate_array(int * A, int S, int T)
 {
     /**
      * Seed the pseudo-random number generator with the number of seconds 
