@@ -290,8 +290,8 @@ void copy_array(int * source_array, int * target_array, int S)
  * 
  * Assume that the value which is passed into this function as T 
  * is the total number of states which each element of A can be 
- * selected as (and that any element of A is a nonnegative integer 
- * no larger than T - 1).
+ * selected as (and that any element of A is a natural number 
+ * no larger than T).
  * 
  * This function returns no value (but it does update the array 
  * referred to as A if tbe elements of A are not already sorted in 
@@ -306,8 +306,8 @@ void populate_array(int * A, int S, int T)
      */
     srand(time(NULL));
 
-    // Populate the array with random integer values in the range [0, T-1].
-    for (int i = 0; i < S; i++) A[i] = std::rand() % T;
+    // Populate the array with random integer values in the range [1, T].
+    for (int i = 0; i < S; i++) A[i] = 1 + std::rand() % T;
 }
 
 /**
