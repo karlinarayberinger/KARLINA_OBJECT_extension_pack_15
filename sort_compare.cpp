@@ -17,6 +17,7 @@
 #define MAXIMUM_T 1000 // constant which represents the maximum value for T
 
 /** function prototypes */
+void copy_array(int * source_array, int * target_array, int S);
 void populate_array(int * A, int S, int T);
 void bubble_sort(int * A, int S);
 void merge_sort(int * A, int S);
@@ -29,8 +30,8 @@ int main()
     // Declare three int type variables and set each of their initial values to 0.
     int S = 0, T = 0, i = 0;
 
-    // Declare one pointer-to-int type variable.
-    int * A;
+    // Declare two pointer-to-int type variables.
+    int * A, * A_copy;
 
     // Declare a file output stream object.
     std::ofstream file;
@@ -111,11 +112,11 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
-    // Print "UNSORTED ARRAY" to the command line terminal.
-    std::cout << "\n\nUNSORTED ARRAY";
+    // Print "UNSORTED ARRAY A" to the command line terminal.
+    std::cout << "\n\nUNSORTED ARRAY A";
 
-    // Print "UNSORTED ARRAY" to the file outpur stream.
-    file << "\n\nUNSORTED ARRAY";
+    // Print "UNSORTED ARRAY A" to the file outpur stream.
+    file << "\n\nUNSORTED ARRAY A";
 
     /**
      * Allocate S contiguous int-sized chunks of memory 
@@ -127,6 +128,7 @@ int main()
      * compile time).
      */
     A = new int [S];
+    A_copy = new int [S];
 
     // Populate A with random integer values.
     populate_array(A,S,T);
@@ -155,6 +157,33 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
+    // Populate A_copy with the values of A such that both arrays appear to house identical data contents.
+    copy_array(A,A_copy,S);
+
+    // Print "UNSORTED ARRAY A_copy" to the command line terminal.
+    std::cout << "\n\nUNSORTED ARRAY A_copy";
+
+    // Print "UNSORTED ARRAY A_copy" to the file outpur stream.
+    file << "\n\nUNSORTED ARRAY A_copy";
+
+    // Print the contents of A_copy to the command line terminal.
+    std::cout << "\n\nA_copy := " << A_copy << ". // memory address of A_copy[0]\n";
+
+    // Print the contents of A_copy to the file output stream.
+    file << "\n\nA_copy := " << A_copy << ". // memory address of A_copy[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A_copy, 
+     * print the contents of the ith element of the array, A_copy[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA_copy[" << i << "] := " << A_copy[i] << ".\t\t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
+        file << "\nA_copy[" << i << "] := " << A_copy[i] << ".\t\t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
+    }
+
     // Get the start time.
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -167,8 +196,11 @@ int main()
     // Get the end time
     auto end = std::chrono::high_resolution_clock::now();
 
-    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values
+    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A.
     delete [] A;
+
+    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy.
+    delete [] A_copy;
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -186,6 +218,31 @@ int main()
     // Exit the program.
     return 0; 
 } 
+
+/**
+ * Copy the elements of source_array into tartet_array such that both arrays 
+ * appear to have the same permutation of int type values.
+ * 
+ * Assume that the value which is passed into this function as source_array 
+ * is the memory address of the first element of a one-dimensional 
+ * array of exactly S int type values.
+ * 
+ * Assume that the value which is passed into this function as target_array 
+ * is the memory address of the first element of a one-dimensional 
+ * array of exactly S int type values.
+ * 
+ * Assume that the value which is passed into this function as S 
+ * is the total number of elements which comprise the array 
+ * represented by A.
+ * 
+ * This function returns no value (but it does update the array 
+ * referred to as A if tbe elements of A are not already sorted in 
+ * ascending order).
+ */
+void copy_array(int * source_array, int * target_array, int S)
+{
+    for (int i = 0; i < S; i++) target_array[i] = source_array[i];
+}
 
 /**
  * Populate an array of int type values with randomized integer values.

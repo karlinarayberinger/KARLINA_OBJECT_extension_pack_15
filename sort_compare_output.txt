@@ -4,33 +4,43 @@ Start Of Program
 
 Enter a natural number value to store in the value S which is no larger than 1000: 
 
-The value which was entered for S is 7.
+The value which was entered for S is 6.
 
-S := 7. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
+S := 6. // number of consecutive int-sized chunks of memory to allocate to a one-dimensional array of S integers named A.
 
 --------------------------------
 
 Enter a natural number value to store in the value T which is no larger than 1000: 
 
-The value which was entered for T is 45.
+The value which was entered for T is 32.
 
-T := 45. // number of unique states each element of A can represent exactly one of.
+T := 32. // number of unique states each element of A can represent exactly one of.
+
+--------------------------------
+
+UNSORTED ARRAY A
+
+A := 0x55e63953d8c0. // memory address of A[0]
+
+A[0] := 4.		// &A[0] = 0x55e63953d8c0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[0]).
+A[1] := 12.		// &A[1] = 0x55e63953d8c4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[1]).
+A[2] := 11.		// &A[2] = 0x55e63953d8c8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[2]).
+A[3] := 5.		// &A[3] = 0x55e63953d8cc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[3]).
+A[4] := 22.		// &A[4] = 0x55e63953d8d0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[4]).
+A[5] := 29.		// &A[5] = 0x55e63953d8d4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[5]).
 
 --------------------------------
 
-UNSORTED ARRAY
+UNSORTED ARRAY A_copy
 
-A := 0x5634ae4d68c0. // memory address of A[0]
+A_copy := 0x55e63953d8e0. // memory address of A_copy[0]
 
-A[0] := 12.		// &A[0] = 0x5634ae4d68c0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[0]).
-A[1] := 41.		// &A[1] = 0x5634ae4d68c4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[1]).
-A[2] := 2.		// &A[2] = 0x5634ae4d68c8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[2]).
-A[3] := 37.		// &A[3] = 0x5634ae4d68cc. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[3]).
-A[4] := 25.		// &A[4] = 0x5634ae4d68d0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[4]).
-A[5] := 40.		// &A[5] = 0x5634ae4d68d4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[5]).
-A[6] := 9.		// &A[6] = 0x5634ae4d68d8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[6]).
-
---------------------------------
+A_copy[0] := 4.		// &A_copy[0] = 0x55e63953d8e0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[0]).
+A_copy[1] := 12.		// &A_copy[1] = 0x55e63953d8e4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[1]).
+A_copy[2] := 11.		// &A_copy[2] = 0x55e63953d8e8. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[2]).
+A_copy[3] := 5.		// &A_copy[3] = 0x55e63953d8ec. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[3]).
+A_copy[4] := 22.		// &A_copy[4] = 0x55e63953d8f0. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[4]).
+A_copy[5] := 29.		// &A_copy[5] = 0x55e63953d8f4. (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[5]).
 
 --------------------------------
 
