@@ -14,11 +14,11 @@ Throughout all of karbytes' lifetime, karbytes intends to create at least three 
 
 Each zip file which is enumerated on this web page and whose file name contains the string "_04june2024" (quotation characters not included) was downloaded from exactly one karbytes-created GitHub repository which karbytes thinks is likely that karbytes will eventually update after 11:59PM Pacific Standard Time on 04_JUNE_2024. 
 
-Each zip file which is enumerated on this web page has exactly one uniquely corresponding karbytes-created GitHub repository (which is associated with the GitHub username @karlinarayberinger). There also exists exactly one uniquely corresponding "micro directory" web page for each of the aforementioned public (but not private) zip files on the one and only "macro directory" web page of the website named Karbytes For Life Blog dot WordPress dot Com).
+Each zip file which is enumerated on this web page has exactly one uniquely corresponding karbytes-created GitHub repository (which is associated with the GitHub username @karlinarayberinger). There also exists exactly one uniquely corresponding "micro directory" web page for each of the aforementioned public (but not private) zip files (except for karbytes_beginner_bytes_computer_science_2010_to_2015.zip) on the one and only "macro directory" web page of the website named Karbytes For Life Blog dot WordPress dot Com).
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-M_DISC 1 of 2 (disc contains exactly two folders named karbytes_ultra_2024_edition_6_core and karbytes_ultra_2024_edition_5_setup)
+M_DISC 1 of 2 (disc contains exactly two folders named karbytes_ultra_2024_edition_6_core and karbytes_ultra_2024_edition_6_setup)
 
 M_DISC 1 of 2 data collection name: karbytes_ultra_2024_edition_6
 
@@ -48,11 +48,13 @@ karbytes_ultra_2024_edition_6_core: // folder contains exactly 10 files (446.9 m
 
 	- KARLINA_OBJECT_winter_2023_starter_pack-main.zip // 116.3 megabytes
 
-karbytes_ultra_2024_edition_5_setup: // folder contains exactly 34 files (3.1 gigabytes total).
+karbytes_ultra_2024_edition_6_setup: // folder contains exactly 36 files (3.3 gigabytes total).
 
 	- INSTAGRAM_KARBYTES_2024-main.zip // 317.3 megabytes
 
 	- karbytes_23AndMe_Ancestry_Data-main.zip // 6.5 megabytes
+
+	- karbytes_beginner_bytes_computer_science_2010_to_2015.zip // 331.5 megabytes
 
 	- karbytes_basement_0-main.zip // 149.1 megabytes; downloaded from a private karbytes-created GitHub repository; may contain some public karbytes content in the form of "unlisted web page" source code and associated media files (for the website named Karbytes For Life Blog dot WordPress dot Com).
 
@@ -77,6 +79,8 @@ karbytes_ultra_2024_edition_5_setup: // folder contains exactly 34 files (3.1 gi
 	- karbytes_basement_10-main.zip // 16.1 megabytes; downloaded from a private karbytes-created GitHub repository; may contain some public karbytes content in the form of "unlisted web page" source code and associated media files (for the website named Karbytes For Life Blog dot WordPress dot Com).
 
 	- karbytes_basement_11-main.zip // 26.6 megabytes; downloaded from a private karbytes-created GitHub repository; may contain some public karbytes content in the form of "unlisted web page" source code and associated media files (for the website named Karbytes For Life Blog dot WordPress dot Com).
+
+	- karbytes_basement_12-main.zip // 7.5 megabytes; downloaded from a private karbytes-created GitHub repository; may contain some public karbytes content in the form of "unlisted web page" source code and associated media files (for the website named Karbytes For Life Blog dot WordPress dot Com).
 
 	- KARLINA_OBJECT_12_JUNE_2023-main.zip // 19.4 megabytes
 
