@@ -44,6 +44,12 @@ int main()
     // Declare a file output stream object.
     std::ofstream file;
 
+    // Set the number of digits of floating-point numbers which are printed to the command line terminal to 100 digits.
+    std::cout.precision(100);
+
+    // Set the number of digits of floating-point numbers which are printed to the file output stream to 100 digits.
+    file.precision(100);
+    
     /**
      * If the file named sort_compare_output.txt does not already exist 
      * inside of the same file directory as the file named arrays.cpp, 
