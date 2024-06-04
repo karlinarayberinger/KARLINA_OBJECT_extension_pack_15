@@ -419,6 +419,12 @@ int main()
     // Print the duration in seconds.
     std::cout << "\n\nElapsed time for selection_sort(A_copy_1, S): " << duration.count() << " seconds.";
 
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
     /***********************************************************************************
      * QUICK SORT
      ***********************************************************************************/
