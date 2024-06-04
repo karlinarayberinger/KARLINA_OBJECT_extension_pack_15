@@ -633,20 +633,32 @@ void selection_sort(int * A, int S)
     int i = 0, j = 0, min_index = 0, placeholder = 0;
     bool array_is_sorted = false;
 
+    // Repeat the sorting process until the array is confirmed to be sorted.
     while (!array_is_sorted)
     {
-        array_is_sorted = true;  // Assume the array is sorted
+        // Assume that the array is initially sorted.
+        array_is_sorted = true;  
+
+        // Iterate across each element in the array (except for the last element).
         for (i = 0; i < S - 1; i++)
         {
-            min_index = i;
+            // Assume that the current element is the minimum value in the array.
+            min_index = i;  
+
+            // Find the minimum element in the unsorted portion of the array.
             for (j = i + 1; j < S; j++)
             {
                 if (A[j] < A[min_index])
                 {
-                    min_index = j;
-                    array_is_sorted = false;  // Found an out-of-order element
+                    // Update min_index if a smaller element value is found.
+                    min_index = j;  
+
+                    // Determine that the array was not sorted and that another pass through the array is needed.
+                    array_is_sorted = false;  
                 }
             }
+
+            // Swap the found minimum element with the first element of the unsorted portion of the array.
             if (min_index != i)
             {
                 placeholder = A[i];
