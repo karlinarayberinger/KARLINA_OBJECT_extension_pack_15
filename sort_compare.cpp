@@ -1,7 +1,7 @@
 /**
  * file: sort_compare.cpp
  * type: plain-text
- * date: 03_JUNE_2024
+ * date: 04_JUNE_2024
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -320,6 +320,7 @@ int main()
 
     // Print the duration in seconds.
     std::cout << "\n\nElapsed time for bubble_sort(A, S): " << duration.count() << " seconds.";
+    file << "\n\nElapsed time for bubble_sort(A, S): " << duration.count() << " seconds.";
 
     // Print a horizontal line to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -369,6 +370,7 @@ int main()
 
     // Print the duration in seconds.
     std::cout << "\n\nElapsed time for merge_sort(A_copy_0, S): " << duration.count() << " seconds.";
+    file << "\n\nElapsed time for merge_sort(A_copy_0, S): " << duration.count() << " seconds.";
 
     // Print a horizontal line to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -418,6 +420,7 @@ int main()
 
     // Print the duration in seconds.
     std::cout << "\n\nElapsed time for selection_sort(A_copy_1, S): " << duration.count() << " seconds.";
+    file << "\n\nElapsed time for selection_sort(A_copy_1, S): " << duration.count() << " seconds.";
 
     // Print a horizontal line to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -467,6 +470,8 @@ int main()
 
     // Print the duration in seconds.
     std::cout << "\n\nElapsed time for quick_sort(A_copy_2, S): " << duration.count() << " seconds.";
+    file << "\n\nElapsed time for quick_sort(A_copy_2, S): " << duration.count() << " seconds.";
+
 
     /***********************************************************************************
      * DELETE ARRAYS
