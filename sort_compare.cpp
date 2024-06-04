@@ -23,6 +23,7 @@ void bubble_sort(int * A, int S);
 void merge_sort(int * A, int S);
 void merge_sort(int * A, int left, int right);
 void merge(int * A, int left, int mid, int right);
+void selection_sort(int * A, int S);
 
 /** program entry point */
 int main()
@@ -34,8 +35,8 @@ int main()
     // Declare three int type variables and set each of their initial values to 0.
     int S = 0, T = 0, i = 0;
 
-    // Declare two pointer-to-int type variables.
-    int * A, * A_copy_0;
+    // Declare three pointer-to-int type variables.
+    int * A, * A_copy_0, * A_copy_1;
 
     // Declare a file output stream object.
     std::ofstream file;
@@ -145,9 +146,10 @@ int main()
      */
     A = new int [S];
     A_copy_0 = new int [S];
+    A_copy_1 = new int [S];
 
     // Populate A with random integer values.
-    populate_array(A,S,T);
+    populate_array(A, S, T);
 
     // Print the contents of A to the command line terminal.
     std::cout << "\n\nA := " << A << ". // memory address of A[0]\n";
@@ -174,7 +176,10 @@ int main()
     file << "\n\n--------------------------------";
 
     // Populate A_copy_0 with the values of A such that both arrays appear to house identical data contents.
-    copy_array(A,A_copy_0,S);
+    copy_array(A, A_copy_0, S);
+
+    // Populate A_copy_1 with the values of A such that both arrays appear to house identical data contents.
+    copy_array(A, A_copy_1, S);
 
     // Print "UNSORTED ARRAY A_copy_0" to the command line terminal.
     std::cout << "\n\nUNSORTED ARRAY A_copy_0";
@@ -198,6 +203,36 @@ int main()
     {
         std::cout << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
         file << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
+    }
+
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    // Print "UNSORTED ARRAY A_copy_1" to the command line terminal.
+    std::cout << "\n\nUNSORTED ARRAY A_copy_1";
+
+    // Print "UNSORTED ARRAY A_copy_1" to the file output stream.
+    file << "\n\nUNSORTED ARRAY A_copy_1";
+
+    // Print the contents of A_copy_1 to the command line terminal.
+    std::cout << "\n\nA_copy_1 := " << A_copy_1 << ". // memory address of A_copy_1[0]\n";
+
+    // Print the contents of A_copy_1 to the file output stream.
+    file << "\n\nA_copy_1 := " << A_copy_1 << ". // memory address of A_copy_1[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A_copy_1, 
+     * print the contents of the ith element of the array, A_copy_1[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA_copy_1[" << i << "] := " << A_copy_1[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
+        file << "\nA_copy_1[" << i << "] := " << A_copy_1[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
     }
 
     // Print a horizontal line to the command line terminal.
@@ -268,7 +303,7 @@ int main()
     // Get the start time.
     start = std::chrono::high_resolution_clock::now();
 
-    // Sort the integer values stored in array A to be in ascending order using the Merge Sort algorithm.
+    // Sort the integer values stored in array A_copy_0 to be in ascending order using the Merge Sort algorithm.
     merge_sort(A_copy_0, S);
 
     // Get the end time.
@@ -298,6 +333,55 @@ int main()
     // Print the duration in seconds
     std::cout << "\n\nElapsed time for merge_sort(A_copy_0, S): " << duration.count() << " seconds.";
 
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    /***********************************************************************************
+     * SELECTION SORT
+     ***********************************************************************************/
+
+    // Print "SORTED ARRAY A_copy_1 (USING SELECTION_SORT)" to the command line terminal.
+    std::cout << "\n\nSORTED ARRAY A_copy_1 (USING SELECTION_SORT)";
+
+    // Print "SORTED ARRAY A_copy_1 (USING SELECTION_SORT)" to the file output stream.
+    file << "\n\nSORTED ARRAY A_copy_1 (USING SELECTION_SORT)";
+
+    // Get the start time.
+    start = std::chrono::high_resolution_clock::now();
+
+    // Sort the integer values stored in array A_copy_1 to be in ascending order using the Selection Sort algorithm.
+    selection_sort(A_copy_1, S);
+
+    // Get the end time.
+    end = std::chrono::high_resolution_clock::now();
+
+    // Calculate the duration of time betweem start and end time.
+    duration = end - start;
+
+    // Print the contents of A_copy_1 to the command line terminal.
+    std::cout << "\n\nA_copy_1 := " << A_copy_1 << ". // memory address of A_copy_1[0]\n";
+
+    // Print the contents of A_copy_1 to the file output stream.
+    file << "\n\nA_copy_1 := " << A_copy_1 << ". // memory address of A_copy_1[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A_copy_1, 
+     * print the contents of the ith element of the array, A_copy_1[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA_copy_1[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
+        file << "\nA_copy_1[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
+    }
+
+    // Print the duration in seconds
+    std::cout << "\n\nElapsed time for selection_sort(A_copy_1, S): " << duration.count() << " seconds.";
+
     /***********************************************************************************
      * DELETE ARRAYS
      ***********************************************************************************/
@@ -307,6 +391,9 @@ int main()
 
     // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy_0.
     delete [] A_copy_0;
+
+    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy_1.
+    delete [] A_copy_1;
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -525,4 +612,47 @@ void merge_sort(int * A, int left, int right)
 void merge_sort(int * A, int S) 
 {
     merge_sort(A, 0, S - 1);
+}
+
+/**
+ * Use the Selection Sort algorithm to arrange the elements of an int type array, 
+ * A, in ascending order.
+ * 
+ * Assume that the value which is passed into this function as A is the memory 
+ * address of the first element of a one-dimensional array of int type values.
+ * 
+ * Assume that the value which is passed into this function as S is the total 
+ * number of elements which comprise the array represented by A.
+ * 
+ * This function returns no value (but it does update the array 
+ * referred to as A if the elements of A are not already sorted in 
+ * ascending order). 
+ */
+void selection_sort(int * A, int S)
+{
+    int i = 0, j = 0, min_index = 0, placeholder = 0;
+    bool array_is_sorted = false;
+
+    while (!array_is_sorted)
+    {
+        array_is_sorted = true;  // Assume the array is sorted
+        for (i = 0; i < S - 1; i++)
+        {
+            min_index = i;
+            for (j = i + 1; j < S; j++)
+            {
+                if (A[j] < A[min_index])
+                {
+                    min_index = j;
+                    array_is_sorted = false;  // Found an out-of-order element
+                }
+            }
+            if (min_index != i)
+            {
+                placeholder = A[i];
+                A[i] = A[min_index];
+                A[min_index] = placeholder;
+            }
+        }
+    }
 }
