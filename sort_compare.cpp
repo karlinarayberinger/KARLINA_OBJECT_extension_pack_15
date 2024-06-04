@@ -342,7 +342,7 @@ int main()
  * represented by A.
  * 
  * This function returns no value (but it does update the array 
- * referred to as A if tbe elements of A are not already sorted in 
+ * referred to as A if the elements of A are not already sorted in 
  * ascending order).
  */
 void copy_array(int * source_array, int * target_array, int S)
@@ -367,7 +367,7 @@ void copy_array(int * source_array, int * target_array, int S)
  * no larger than T).
  * 
  * This function returns no value (but it does update the array 
- * referred to as A if tbe elements of A are not already sorted in 
+ * referred to as A if the elements of A are not already sorted in 
  * ascending order).
  */
 void populate_array(int * A, int S, int T)
@@ -394,7 +394,7 @@ void populate_array(int * A, int S, int T)
  * number of elements which comprise the array represented by A.
  * 
  * This function returns no value (but it does update the array 
- * referred to as A if tbe elements of A are not already sorted in 
+ * referred to as A if the elements of A are not already sorted in 
  * ascending order). 
  */
 void bubble_sort(int * A, int S)
@@ -418,59 +418,110 @@ void bubble_sort(int * A, int S)
     }
 }
 
-void merge(int * A, int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
-
-    int *L = new int[n1];
-    int *R = new int[n2];
-
-    for (int i = 0; i < n1; i++)
-        L[i] = A[left + i];
-    for (int j = 0; j < n2; j++)
-        R[j] = A[mid + 1 + j];
-
+/**
+ * Merges two subarrays of A[].
+ * First subarray is A[left..mid]
+ * Second subarray is A[mid+1..right]
+ * The merged result will be sorted in ascending order.
+ */
+void merge(int * A, int left, int mid, int right) 
+{
+    // Initialize the indexes of the subarrays and merged array.
     int i = 0, j = 0, k = left;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
+
+    // Set n0 to store the number of elements in the left subarray.
+    int n0 = mid - left + 1; 
+
+    // Set n0 to store the number of elements in the right subarray.
+    int n1 = right - mid; 
+
+    // Dynamically allocate arrays, L and R, to store the elements of the subarrays.
+    int * L = new int[n0];
+    int * R = new int[n1];
+
+    // Copy the elements of the left subarray into L.
+    for (i = 0; i < n0; i++) L[i] = A[left + i];
+
+    // Copy the elements of the right subarray into R.
+    for (j = 0; j < n1; j++) R[j] = A[mid + 1 + j];
+
+    // Merge arrays L and R back into the segment of array A which starts at A[left] and which ends at A[right].
+    i = 0, j = 0;
+    while (i < n0 && j < n1) 
+    {
+        if (L[i] <= R[j]) 
+        {
             A[k] = L[i];
             i++;
-        } else {
+        } 
+        else 
+        {
             A[k] = R[j];
             j++;
         }
         k++;
     }
 
-    while (i < n1) {
+    // Copy the remaining elements of L (if there are any) into A.
+    while (i < n0) 
+    {
         A[k] = L[i];
         i++;
         k++;
     }
 
-    while (j < n2) {
+    // Copy the remaining elements of R (if there are any) into A.
+    while (j < n1) 
+    {
         A[k] = R[j];
         j++;
         k++;
     }
 
+    // Deallocate the memory which was allocated to the arrays which were dynamically created in this function.
     delete[] L;
     delete[] R;
 }
 
+/**
+ * This function sorts the segment of array A which starts at A[left] 
+ * and which ends at A[right] using the Merge Sort algorithm
+ * by recursively dividing that array into halves, sorting each half,
+ * and merging those sorted halves.
+ * 
+ * This function returns no value (but it does update the segment of 
+ * array A which starts at A[left] and which ends at A[right] if 
+ * that segment is not already sorted in ascending order). 
+ */
 void merge_sort(int * A, int left, int right) 
 {
     if (left < right) 
     {
         int mid = left + (right - left) / 2;
-
         merge_sort(A, left, mid);
         merge_sort(A, mid + 1, right);
-
         merge(A, left, mid, right);
     }
 }
 
+/**
+ * Use the Merge Sort algorithm to arrange the elements of an int type array, 
+ * A, in ascending order.
+ * 
+ * This function is the wrapper function for merge_sort.
+ * This function sorts the entire array named A (which is comprised of 
+ * exactly S int type elements).
+ *
+ * Assume that the value which is passed into this function as A is the memory 
+ * address of the first element of a one-dimensional array of int type values.
+ * 
+ * Assume that the value which is passed into this function as S is the total 
+ * number of elements which comprise the array represented by A.
+ * 
+ * This function returns no value (but it does update the array 
+ * referred to as A if the elements of A are not already sorted in 
+ * ascending order). 
+ */
 void merge_sort(int * A, int S) 
 {
     merge_sort(A, 0, S - 1);
