@@ -6,27 +6,29 @@
  * license: PUBLIC_DOMAIN
  */
 
-The following list of M_DISC contents encompass the entire collection of public domain web-based files which comprise the body of intellectual property named karbytes as that collection is configured at 11:59PM Pacific Standard Time on 08_JUNE_2024. 
+The following list of M_DISC contents encompass the entire collection of public domain web-based files which comprise the body of intellectual property named karbytes as that collection is configured at 11:59PM Pacific Standard Time on 04_JUNE_2024. 
 
-Throughout all of karbytes' lifetime, karbytes intends to create at least four M_DISC copies of the M_DISC whose contents encompass all of the data referred to on this web page as karbytes_ultra_2024_edition_6_core.
+Throughout all of karbytes' lifetime, karbytes intends to create at least three M_DISC copies of the M_DISC whose contents encompass all of the data referred to on this web page as karbytes_ultra_2024_edition_6.
 
-Throughout all of karbytes' lifetime, karbytes intends to create at least four M_DISC copies of the M_DISC whose contents encompass all of the data referred to on this web page as karbytes_ultra_2024_edition_5_setup.
+Throughout all of karbytes' lifetime, karbytes intends to create at least three M_DISC copies of the M_DISC whose contents encompass all of the data referred to on this web page as karbytes_20march2024_journals.
 
-Throughout all of karbytes' lifetime, karbytes intends to create at least four M_DISC copies of the M_DISC whose contents encompass all of the data referred to on this web page as karbytes_20march2024_journals.
-
-Each zip file which is enumerated on this web page and whose file name contains the string "_08june2024" (quotation characters not included) was downloaded from exactly one karbytes-created GitHub repository which karbytes thinks is likely that karbytes will eventually update after 11:59PM Pacific Standard Time on 08_JUNE_2024. 
+Each zip file which is enumerated on this web page and whose file name contains the string "_04june2024" (quotation characters not included) was downloaded from exactly one karbytes-created GitHub repository which karbytes thinks is likely that karbytes will eventually update after 11:59PM Pacific Standard Time on 04_JUNE_2024. 
 
 Each zip file which is enumerated on this web page has exactly one uniquely corresponding karbytes-created GitHub repository (which is associated with the GitHub username @karlinarayberinger). There also exists exactly one uniquely corresponding "micro directory" web page for each of the aforementioned public (but not private) zip files on the one and only "macro directory" web page of the website named Karbytes For Life Blog dot WordPress dot Com).
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-M_DISC 1 of 3 (disc contains exactly one folder named karbytes_ultra_2024_edition_6_core)
+M_DISC 1 of 2 (disc contains exactly two folders named karbytes_ultra_2024_edition_6_core and karbytes_ultra_2024_edition_5_setup)
+
+M_DISC 1 of 2 data collection name: karbytes_ultra_2024_edition_6
+
+M_DISC 2 of 2 data collection size: 3.4 gigabytes
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 karbytes_ultra_2024_edition_6_core: // folder contains exactly 10 files (446.9 megabytes total).
 
-	- KARBYTES_FOR_LIFE_BLOG-main_08june2024.zip // 601.3 kilobytes
+	- KARBYTES_FOR_LIFE_BLOG-main_04june2024.zip // 601.3 kilobytes
 
 	- KARLINA_OBJECT-main.zip // 116.3 megabytes
 
@@ -38,19 +40,13 @@ karbytes_ultra_2024_edition_6_core: // folder contains exactly 10 files (446.9 m
 
 	- KARLINA_OBJECT_extension_pack_14-main.zip // 6.1 megabytes
 
-	- KARLINA_OBJECT_extension_pack_15-main_08june2024.zip // 40.3 megabytes
+	- KARLINA_OBJECT_extension_pack_15-main.zip // 40.3 megabytes
 
 	- KARLINA_OBJECT_autumn_2023_starter_pack-main.zip // 86.9 megabytes
 
 	- KARLINA_OBJECT_summer_2023_starter_pack-main.zip // 27.5 megabytes
 
 	- KARLINA_OBJECT_winter_2023_starter_pack-main.zip // 116.3 megabytes
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-M_DISC 2 of 3 (disc contains exactly one folder named karbytes_ultra_2024_edition_5_setup)
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 karbytes_ultra_2024_edition_5_setup: // folder contains exactly 34 files (3.1 gigabytes total).
 
@@ -124,7 +120,11 @@ karbytes_ultra_2024_edition_5_setup: // folder contains exactly 34 files (3.1 gi
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-M_DISC 3 of 3 (disc contains exactly one folder named karbytes_20march2024_journals)
+M_DISC 2 of 2 (disc contains exactly one folder named karbytes_20march2024_journals)
+
+M_DISC 2 of 2 data collection name: karbytes_20march2024_journals
+
+M_DISC 2 of 2 data collection size: 3.7 gigabytes
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
