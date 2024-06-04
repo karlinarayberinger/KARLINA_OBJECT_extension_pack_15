@@ -27,11 +27,15 @@ void merge(int * A, int left, int mid, int right);
 /** program entry point */
 int main()
 {
+    /***********************************************************************************
+     * INITIALIZE VARIABLES
+     ***********************************************************************************/
+
     // Declare three int type variables and set each of their initial values to 0.
     int S = 0, T = 0, i = 0;
 
     // Declare two pointer-to-int type variables.
-    int * A, * A_copy;
+    int * A, * A_copy_0;
 
     // Declare a file output stream object.
     std::ofstream file;
@@ -55,6 +59,10 @@ int main()
     file << "--------------------------------";
     file << "\nStart Of Program";
     file << "\n--------------------------------";
+
+    /***********************************************************************************
+     * SET S
+     ***********************************************************************************/
 
     // Prompt the user to enter an input value for S.
     std::cout << "\n\nEnter a natural number value to store in the value S which is no larger than " << MAXIMUM_S << ": ";
@@ -84,6 +92,10 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
+    /***********************************************************************************
+     * SET T
+     ***********************************************************************************/
+
     // Prompt the user to enter an input value for T.
     std::cout << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_T << ": ";
     file << "\n\nEnter a natural number value to store in the value T which is no larger than " << MAXIMUM_T << ": ";
@@ -112,6 +124,10 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
+    /***********************************************************************************
+     * GENERATE ARRAYS
+     ***********************************************************************************/
+
     // Print "UNSORTED ARRAY A" to the command line terminal.
     std::cout << "\n\nUNSORTED ARRAY A";
 
@@ -128,7 +144,7 @@ int main()
      * compile time).
      */
     A = new int [S];
-    A_copy = new int [S];
+    A_copy_0 = new int [S];
 
     // Populate A with random integer values.
     populate_array(A,S,T);
@@ -157,31 +173,31 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
-    // Populate A_copy with the values of A such that both arrays appear to house identical data contents.
-    copy_array(A,A_copy,S);
+    // Populate A_copy_0 with the values of A such that both arrays appear to house identical data contents.
+    copy_array(A,A_copy_0,S);
 
-    // Print "UNSORTED ARRAY A_copy" to the command line terminal.
-    std::cout << "\n\nUNSORTED ARRAY A_copy";
+    // Print "UNSORTED ARRAY A_copy_0" to the command line terminal.
+    std::cout << "\n\nUNSORTED ARRAY A_copy_0";
 
-    // Print "UNSORTED ARRAY A_copy" to the file output stream.
-    file << "\n\nUNSORTED ARRAY A_copy";
+    // Print "UNSORTED ARRAY A_copy_0" to the file output stream.
+    file << "\n\nUNSORTED ARRAY A_copy_0";
 
-    // Print the contents of A_copy to the command line terminal.
-    std::cout << "\n\nA_copy := " << A_copy << ". // memory address of A_copy[0]\n";
+    // Print the contents of A_copy_0 to the command line terminal.
+    std::cout << "\n\nA_copy_0 := " << A_copy_0 << ". // memory address of A_copy_0[0]\n";
 
-    // Print the contents of A_copy to the file output stream.
-    file << "\n\nA_copy := " << A_copy << ". // memory address of A_copy[0]\n";
+    // Print the contents of A_copy_0 to the file output stream.
+    file << "\n\nA_copy_0 := " << A_copy_0 << ". // memory address of A_copy_0[0]\n";
 
     /**
-     * For each element, i, of the array represented by A_copy, 
-     * print the contents of the ith element of the array, A_copy[i], 
+     * For each element, i, of the array represented by A_copy_0, 
+     * print the contents of the ith element of the array, A_copy_0[i], 
      * and the memory address of that array element 
      * to the command line terminal and to the file output stream.
      */
     for (i = 0; i < S; i += 1) 
     {
-        std::cout << "\nA_copy[" << i << "] := " << A_copy[i] << ". \t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
-        file << "\nA_copy[" << i << "] := " << A_copy[i] << ". \t// &A_copy[" << i << "] = " << &A_copy[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy[" << i << "]).";
+        std::cout << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
+        file << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
     }
 
     // Print a horizontal line to the command line terminal.
@@ -189,6 +205,10 @@ int main()
 
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
+
+    /***********************************************************************************
+     * BUBBLE SORT
+     ***********************************************************************************/
 
     // Print "SORTED ARRAY A (USING BUBBLE_SORT)" to the command line terminal.
     std::cout << "\n\nSORTED ARRAY A (USING BUBBLE_SORT)";
@@ -229,11 +249,64 @@ int main()
     // Print the duration in seconds
     std::cout << "\n\nElapsed time for bubble_sort(A, S): " << duration.count() << " seconds.";
 
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
+    /***********************************************************************************
+     * MERGE SORT
+     ***********************************************************************************/
+
+    // Print "SORTED ARRAY A_copy_0 (USING MERGE_SORT)" to the command line terminal.
+    std::cout << "\n\nSORTED ARRAY A_copy_0 (USING MERGE_SORT)";
+
+    // Print "SORTED ARRAY A_copy_0 (USING MERGE_SORT)" to the file output stream.
+    file << "\n\nSORTED ARRAY A_copy_0 (USING MERGE_SORT)";
+
+    // Get the start time.
+    start = std::chrono::high_resolution_clock::now();
+
+    // Sort the integer values stored in array A to be in ascending order using the Merge Sort algorithm.
+    merge_sort(A_copy_0, S);
+
+    // Get the end time.
+    end = std::chrono::high_resolution_clock::now();
+
+    // Calculate the duration of time betweem start and end time.
+    duration = end - start;
+
+    // Print the contents of A_copy_0 to the command line terminal.
+    std::cout << "\n\nA_copy_0 := " << A_copy_0 << ". // memory address of A_copy_0[0]\n";
+
+    // Print the contents of A_copy_0 to the file output stream.
+    file << "\n\nA_copy_0 := " << A_copy_0 << ". // memory address of A_copy_0[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A_copy_0, 
+     * print the contents of the ith element of the array, A_copy_0[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
+        file << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
+    }
+
+    // Print the duration in seconds
+    std::cout << "\n\nElapsed time for merge_sort(A_copy_0, S): " << duration.count() << " seconds.";
+
+    /***********************************************************************************
+     * DELETE ARRAYS
+     ***********************************************************************************/
+
     // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A.
     delete [] A;
 
-    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy.
-    delete [] A_copy;
+    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy_0.
+    delete [] A_copy_0;
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
