@@ -24,6 +24,9 @@ void merge_sort(int * A, int S);
 void merge_sort(int * A, int left, int right);
 void merge(int * A, int left, int mid, int right);
 void selection_sort(int * A, int S);
+void quick_sort(int * A, int S);
+void quick_sort(int * A, int low, int high);
+int partition(int * A, int low, int high);
 
 /** program entry point */
 int main()
@@ -35,8 +38,8 @@ int main()
     // Declare three int type variables and set each of their initial values to 0.
     int S = 0, T = 0, i = 0;
 
-    // Declare three pointer-to-int type variables.
-    int * A, * A_copy_0, * A_copy_1;
+    // Declare four pointer-to-int type variables.
+    int * A, * A_copy_0, * A_copy_1, * A_copy_2;
 
     // Declare a file output stream object.
     std::ofstream file;
@@ -147,6 +150,7 @@ int main()
     A = new int [S];
     A_copy_0 = new int [S];
     A_copy_1 = new int [S];
+    A_copy_2 = new int [S];
 
     // Populate A with random integer values.
     populate_array(A, S, T);
@@ -180,6 +184,9 @@ int main()
 
     // Populate A_copy_1 with the values of A such that both arrays appear to house identical data contents.
     copy_array(A, A_copy_1, S);
+
+    // Populate A_copy_2 with the values of A such that both arrays appear to house identical data contents.
+    copy_array(A, A_copy_2, S);
 
     // Print "UNSORTED ARRAY A_copy_0" to the command line terminal.
     std::cout << "\n\nUNSORTED ARRAY A_copy_0";
@@ -241,6 +248,36 @@ int main()
     // Print a horizontal line to the file output stream.
     file << "\n\n--------------------------------";
 
+    // Print "UNSORTED ARRAY A_copy_2" to the command line terminal.
+    std::cout << "\n\nUNSORTED ARRAY A_copy_2";
+
+    // Print "UNSORTED ARRAY A_copy_2" to the file output stream.
+    file << "\n\nUNSORTED ARRAY A_copy_2";
+
+    // Print the contents of A_copy_2 to the command line terminal.
+    std::cout << "\n\nA_copy_2 := " << A_copy_2 << ". // memory address of A_copy_2[0]\n";
+
+    // Print the contents of A_copy_2 to the file output stream.
+    file << "\n\nA_copy_2 := " << A_copy_2 << ". // memory address of A_copy_2[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A_copy_2, 
+     * print the contents of the ith element of the array, A_copy_2[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA_copy_2[" << i << "] := " << A_copy_2[i] << ". \t// &A_copy_2[" << i << "] = " << &A_copy_2[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_2[" << i << "]).";
+        file << "\nA_copy_2[" << i << "] := " << A_copy_2[i] << ". \t// &A_copy_2[" << i << "] = " << &A_copy_2[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_2[" << i << "]).";
+    }
+
+    // Print a horizontal line to the command line terminal.
+    std::cout << "\n\n--------------------------------";
+
+    // Print a horizontal line to the file output stream.
+    file << "\n\n--------------------------------";
+
     /***********************************************************************************
      * BUBBLE SORT
      ***********************************************************************************/
@@ -281,7 +318,7 @@ int main()
         file << "\nA[" << i << "] := " << A[i] << ". \t// &A[" << i << "] = " << &A[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A[" << i << "]).";
     }
 
-    // Print the duration in seconds
+    // Print the duration in seconds.
     std::cout << "\n\nElapsed time for bubble_sort(A, S): " << duration.count() << " seconds.";
 
     // Print a horizontal line to the command line terminal.
@@ -330,7 +367,7 @@ int main()
         file << "\nA_copy_0[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_0[" << i << "] = " << &A_copy_0[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_0[" << i << "]).";
     }
 
-    // Print the duration in seconds
+    // Print the duration in seconds.
     std::cout << "\n\nElapsed time for merge_sort(A_copy_0, S): " << duration.count() << " seconds.";
 
     // Print a horizontal line to the command line terminal.
@@ -375,12 +412,55 @@ int main()
      */
     for (i = 0; i < S; i += 1) 
     {
-        std::cout << "\nA_copy_1[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
-        file << "\nA_copy_1[" << i << "] := " << A_copy_0[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
+        std::cout << "\nA_copy_1[" << i << "] := " << A_copy_1[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
+        file << "\nA_copy_1[" << i << "] := " << A_copy_1[i] << ". \t// &A_copy_1[" << i << "] = " << &A_copy_1[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_1[" << i << "]).";
     }
 
-    // Print the duration in seconds
+    // Print the duration in seconds.
     std::cout << "\n\nElapsed time for selection_sort(A_copy_1, S): " << duration.count() << " seconds.";
+
+    /***********************************************************************************
+     * QUICK SORT
+     ***********************************************************************************/
+
+    // Print "SORTED ARRAY A_copy_2 (USING QUICK_SORT)" to the command line terminal.
+    std::cout << "\n\nSORTED ARRAY A_copy_2 (USING QUICK_SORT)";
+
+    // Print "SORTED ARRAY A_copy_2 (USING QUICK_SORT)" to the file output stream.
+    file << "\n\nSORTED ARRAY A_copy_2 (USING QUICK_SORT)";
+
+    // Get the start time.
+    start = std::chrono::high_resolution_clock::now();
+
+    // Sort the integer values stored in array A_copy_1 to be in ascending order using the Quick Sort algorithm.
+    quick_sort(A_copy_2, S);
+
+    // Get the end time.
+    end = std::chrono::high_resolution_clock::now();
+
+    // Calculate the duration of time betweem start and end time.
+    duration = end - start;
+
+    // Print the contents of A_copy_2 to the command line terminal.
+    std::cout << "\n\nA_copy_2 := " << A_copy_2 << ". // memory address of A_copy_2[0]\n";
+
+    // Print the contents of A_copy_2 to the file output stream.
+    file << "\n\nA_copy_2 := " << A_copy_2 << ". // memory address of A_copy_2[0]\n";
+
+    /**
+     * For each element, i, of the array represented by A_copy_2, 
+     * print the contents of the ith element of the array, A_copy_2[i], 
+     * and the memory address of that array element 
+     * to the command line terminal and to the file output stream.
+     */
+    for (i = 0; i < S; i += 1) 
+    {
+        std::cout << "\nA_copy_2[" << i << "] := " << A_copy_2[i] << ". \t// &A_copy_2[" << i << "] = " << &A_copy_2[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_2[" << i << "]).";
+        file << "\nA_copy_2[" << i << "] := " << A_copy_2[i] << ". \t// &A_copy_2[" << i << "] = " << &A_copy_2[i] << ". (memory address of the first memory cell comprising the block of 4 contiguous memory cells allocated to A_copy_2[" << i << "]).";
+    }
+
+    // Print the duration in seconds.
+    std::cout << "\n\nElapsed time for quick_sort(A_copy_2, S): " << duration.count() << " seconds.";
 
     /***********************************************************************************
      * DELETE ARRAYS
@@ -394,6 +474,9 @@ int main()
 
     // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy_1.
     delete [] A_copy_1;
+
+    // De-allocate memory which was assigned to the dynamically-allocated array of S int type values named A_copy_2.
+    delete [] A_copy_2;
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -667,4 +750,74 @@ void selection_sort(int * A, int S)
             }
         }
     }
+}
+
+/**
+ * Partition array A into two parts and return the index of the pivot element.
+ * 
+ * Elements which are smaller than the pivot element value will be on the left 
+ * side of the pivot element in the array and elements which are larger than 
+ * the pivot element will be on the right side of the pivot element in the array.
+ * 
+ */
+int partition(int * A, int low, int high) 
+{
+    int pivot = A[high];  
+    int i = low - 1;      
+    for (int j = low; j <= high - 1; j++) 
+    {
+        if (A[j] < pivot) 
+        {
+            i++;
+            int placeholder = A[i];
+            A[i] = A[j];
+            A[j] = placeholder;
+        }
+    }
+    int placeholder = A[i + 1];
+    A[i + 1] = A[high];
+    A[high] = placeholder;
+    return (i + 1);
+}
+
+/**
+ * This function sorts the segment of array A which starts at A[low] 
+ * and which ends at A[high] using the Quick Sort algorithm
+ * by recursively sorting through partitions of array A.
+ * 
+ * This function returns no value (but it does update the segment of 
+ * array A which starts at A[low] and which ends at A[high] if 
+ * that segment is not already sorted in ascending order). 
+ */
+void quick_sort(int * A, int low, int high) 
+{
+    if (low < high) 
+    {
+        int partitioning_index = partition(A, low, high);
+        quick_sort(A, low, partitioning_index - 1);
+        quick_sort(A, partitioning_index + 1, high);
+    }
+}
+
+/**
+ * Use the Quick Sort algorithm to arrange the elements of an int type array, 
+ * A, in ascending order.
+ * 
+ * This function is the wrapper function for quick_sort.
+ * This function sorts the entire array named A (which is comprised of 
+ * exactly S int type elements).
+ * 
+ * Assume that the value which is passed into this function as A is the memory 
+ * address of the first element of a one-dimensional array of int type values.
+ * 
+ * Assume that the value which is passed into this function as S is the total 
+ * number of elements which comprise the array represented by A.
+ * 
+ * This function returns no value (but it does update the array 
+ * referred to as A if the elements of A are not already sorted in 
+ * ascending order). 
+ */
+void quick_sort(int * A, int S) 
+{
+    quick_sort(A, 0, S - 1);
 }
